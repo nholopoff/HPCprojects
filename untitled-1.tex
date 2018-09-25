@@ -1,0 +1,77 @@
+\documentclass[a4paper, 12pt ]{article}
+\usepackage{amsmath, sectsty, float}
+
+\sectionfont{\centering\underline\LARGE}
+
+\begin{document}
+   \pagenumbering{gobble}
+   \section*{Laws}
+   \subsection*{Commutative Law}
+       \begin{align*}
+           A + B &= B + A\\\\
+           A \cdot B &= B \cdot A
+       \end{align*}
+   \subsection*{Associative Law}
+       \begin{align*}
+          A + (B + C) &= (A + B) + C\\
+                              &= A + B + C\\\\
+          (A \cdot B) \cdot C &= A \cdot (B \cdot C)\\
+                                         &= A \cdot B \cdot C
+      \end{align*}
+   \subsection*{Distributive Law}
+      \begin{align*}
+         A \cdot (B + C) = A \cdot B + A \cdot C
+      \end{align*}
+   \subsection*{Absorption Law}
+      \begin{align*}
+         A + \overline{A} \cdot B &= A + B\\\\
+         \overline{A} + A \cdot B &= \overline{A} + B
+      \end{align*}
+   \subsection*{De Morgan's Law}
+      \begin{align*}
+         \overline{A + B} &= \overline{A} \cdot \overline{B}\\\\
+         \overline{A \cdot B} &= \overline{A} + \overline{B}
+      \end{align*}
+   \section*{Equations}
+   \subsection*{OR (+)}
+      \begin{align*}
+         A + 0 &= A\\
+         A + 1 &= 1\\
+         A + A &= A\\
+         A + \overline{A} &= 1
+      \end{align*}
+      \begin{table}[H]
+         \centering
+         \begin{center}
+            \begin{tabular}{c|c|c|c|c}
+               $A$ & $A + 0$ & $A + 1$ & $A + A$ & $A + \overline{A}$\\
+               \hline
+               0 & 0 & 1 & 0 & 1\\
+               1 & 1 & 1 & 1 & 1\\
+            \end{tabular}
+         \end{center}
+      \end{table}
+   \subsection*{AND $(\cdot)$}
+      \begin{align*}
+         A \cdot 0 &= 0\\
+         A \cdot 1 &= A\\
+         A \cdot A &= A\\
+         A \cdot \overline{A} &= 0
+      \end{align*}
+      \begin{table}[H]
+         \centering
+         \begin{center}
+            \begin{tabular}{c|c|c|c|c}
+               $A$ & $A \cdot 0$ & $A \cdot 1$ & $A \cdot A$ & $A \cdot \overline{A}$\\
+               \hline
+               0 & 0 & 0 & 0 & 0\\
+               1 & 0 & 1 & 1 & 0\\
+            \end{tabular}
+         \end{center}
+      \end{table}
+   \subsection*{NOT ($\overline{X}$)}
+      \begin{align*}
+         \overline{\overline{A}} &= A
+      \end{align*}
+
+\end{document}
