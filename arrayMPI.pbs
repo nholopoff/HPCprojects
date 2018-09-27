@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#SBATCH --partition=normal
+#SBATCH --exclusive
+#SBATCH --nodes=10
+#SBATCH --ntasks=40
+#SBATCH --ntasks-per-node=20
+#SBATCH --output=warlord_%J_stdout.txt
+#SBATCH --error=warlord_%J_stderr.txt
+#SBATCH --time=10:00
+#SBATCH --job-name=warlord
+#SBATCH --mail-user=nicholasholopoff@gmail.com
+#SBATCH --mail-type=ALL
+#SBATCH --chdir=/home/warlord/HPCProjects
+
+module load OpenMPI
+mpirun arrayMPI.mpi

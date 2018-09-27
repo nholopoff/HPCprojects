@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <mpi.h>
 
-#define COLUMN = 10;
-#define MASTER = 0;
+#define COLUMN  10
+#define MASTER  0
 
 int main(){
 	MPI_Init(NULL, NULL);
@@ -13,7 +13,7 @@ int main(){
 	MPI_Comm_size(MPI_COMM_WORLD, &world_size);
 
 	// make array
-	int * array = malloc(COLLUMN * sizeof(int));
+	int * array = malloc(COLUMN * sizeof(int));
 
 	MPI_Barrier(MPI_COMM_WORLD);
 
