@@ -15,7 +15,7 @@ int main(){
 	srand(time(NULL));
 	for(x = 0; x < 10; x++){
 		for(y = 0; y < 10; y++){
-			randMatrix[x][y] = rand() % 500 + 1;
+			randMatrix[x][y] = ( x == y ) ? 0 : ((rand() % 499) + 1);
 		}
 	}
 	puts("Matrix successfully created");
@@ -23,10 +23,10 @@ int main(){
 	// generate csv
 	FILE *fp;
 
-	fp = fopen("input.csv", "w");
+	fp = fopen("input.bin", "wb");
 	for(x = 0; x < 10; x++){
 		for(y = 0; y < 10; y++){
-			fprintf(fp, "%d,", randMatrix[x][y]);
+			fwrite(&randMatrix, sizeof(randMatrix), 1, fp);	
 		}
 	}
 	fclose(fp);

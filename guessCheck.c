@@ -50,7 +50,7 @@ bool isvaluenotinarray(int val, int *arr, int size){
 	return true;
 }
 
-
+void guessandcheck(int runs, int *arr
 
 int main(int argc, char **argv){
 
